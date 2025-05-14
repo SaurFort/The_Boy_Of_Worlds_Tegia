@@ -1,16 +1,82 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+/* S'applique à toute les balises */
+* {
+  /* Theme */
+  --bg: #803c10;
+  --bg-container: #5a2c0d;
+
+  --text: #fff;
+
+  --accent-primary: #2b2fe7;
+
+  /* Propriété */
+  transition: all 0.5s ease;
 }
 
-.mr-auto {
+/* S'applique à tout le corp de la page */
+body {
+  margin: 0;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  font-size: 1.25rem;
+}
+
+/* Menu principal */
+@layer menu {
+  #main-menu {
+    margin-top: 5% !important;
+  }
+
+  #main-menu h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Propriété réutilisable */
+.mx-auto {
+  margin-left: auto;
   margin-right: auto;
 }
 
-.ml-auto {
-  margin-left: auto;
+.button {
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-container);
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: solid 1px #000;
+}
+
+.button.primary {
+  background-color: var(--accent-primary);
 }
 
 .text-center {
   text-align: center;
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+}
+
+.grid-cols-1 {
+  grid-column: 1;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+/* Effet */
+
+.button:hover {
+  box-shadow: 5px 5px 10px var(--bg-container);
+}
+
+.button.primary:hover {
+  box-shadow: 5px 5px 10px var(--accent-primary);
 }

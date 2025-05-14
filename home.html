@@ -1,3 +1,5 @@
+<!-- author: @SaurFort -->
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -8,7 +10,18 @@
     <title>The Boy of Worlds: Tegia</title>
   </head>
 
-  <body class="text-center">
+  <!-- Menu du jeu -->
+  <body class="text-center" id="main-menu">
     <h1>The Boy of Worlds: Tegia</h1>
+    <div class="grid grid-cols-1 gap-1 mx-auto">
+      <button class="button primary" onclick="play()">Jouer</button>
+      <button class="button">Crédits</button>
+    </div>
   </body>
 </html>
+
+<style>
+  @layer menu;
+</style>
+
+<script src="assets/js/home.js"></script>
