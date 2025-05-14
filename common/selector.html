@@ -1,34 +1,36 @@
-<div> <label for="Espèce"> Race:</label><br />
-	<select name="Espèces" id="Espèce" onchange="sexes()">
-		<option value="1"> Kraith </option>
-		<option value="2"> Yalk </option>
-		<br />
-	</select>
-	<br />
-	<br />
+<!-- author: @Hakitox1004, @SaurFort (css) -->
 
-	<div id="sexe_Yalk" style="opacity: 0.2;">
-		Sexe:<br />
-		<input type="radio" name="radio">
-		<label for="radio">0</label>
-		<input type="radio" name="radio">
-		<label for="radio">1</label>
-		<br />
-		<br />
-	</div>
+<div>
+  <div class="mb-1">
+    <label for="Espèce"> Race:</label><br />
+    <select name="Espèces" id="Espèce" onchange="sexes()">
+      <option value="1">Kraith</option>
+      <option value="2">Yalk</option>
+      <br />
+    </select>
+  </div>
 
-	<div id="sexe_Kraith">
-		<input type="radio" name="radio">
-		<label for="radio">Homme</label>
-		<input type="radio" name="radio">
-		<label for="radio">Femme</label>
-		<br />
-		<br />
-	</div>
+  <div class="mb-1">
+    <label>Sexe:</label>
+    <div id="sexe_Yalk" style="opacity: 0.2">
+      <input id="a" type="radio" name="radio" />
+      <label for="radio">0</label>
+      <input id="b" type="radio" name="radio" />
+      <label for="radio">1</label>
+    </div>
 
-	Nom:<br />
-	<input type="text" name="nom" /> <br />
-	<br />
+    <div id="sexe_Kraith">
+      <input type="radio" name="radio" />
+      <label for="radio">Homme</label>
+      <input type="radio" name="radio" />
+      <label for="radio">Femme</label>
+    </div>
+  </div>
+
+  <div class="mb-1">
+    <label for="nom">Nom:</label>
+    <input type="text" name="nom" />
+  </div>
 </div>
 
 <script src="../assets/js/selector.js"></script>
