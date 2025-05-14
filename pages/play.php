@@ -18,8 +18,6 @@ require "../assets/php/utils/cookie.php" // Le require est un équivalent de inc
   <title>Ma partie</title>
 </head>
 
-<body>
-
-</body>
+<body></body>
 
 </html>

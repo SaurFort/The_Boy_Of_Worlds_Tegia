@@ -20,7 +20,7 @@ body {
   color: var(--text);
   font-family: OCR A Std, monospace;
   background-color: var(--bg);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 /* Menu principal */
@@ -70,12 +70,13 @@ body {
 .gap-1 {
   gap: 1rem;
 }
+
 .typo {
   font-family: Impact, fantasy;
   font-weight: 100;
 }
-/* Effet */
 
+/* Effet */
 .button:hover {
   box-shadow: 5px 5px 10px #000;
 }
