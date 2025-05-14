@@ -20,16 +20,16 @@ body {
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 /* Menu principal */
 @layer menu {
-  #main-menu {
+  body {
     margin-top: 5% !important;
   }
 
-  #main-menu h1 {
+  h1 {
     font-size: 4rem;
   }
 }
@@ -74,9 +74,5 @@ body {
 /* Effet */
 
 .button:hover {
-  box-shadow: 5px 5px 10px var(--bg-container);
-}
-
-.button.primary:hover {
-  box-shadow: 5px 5px 10px var(--accent-primary);
+  box-shadow: 5px 5px 10px #000;
 }
