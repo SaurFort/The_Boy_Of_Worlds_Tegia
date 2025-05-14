@@ -19,11 +19,15 @@ $inGame = readCookie("inGame");
 
 <body class="text-center">
   <?php
+
   if ($inGame != "true") {
     echo "<div><h1>Nouvelle partie</h1>";
     include "../common/selector.html";
     echo "</div>";
+  } else {
+    include "../common/intro.php";
   }
+
   ?>
 </body>
 

@@ -15,12 +15,13 @@
 /* S'applique à tout le corp de la page */
 body {
   margin: 0;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--text);
   font-family: OCR A Std, monospace;
   background-color: var(--bg);
   font-size: 1.15rem;
+  max-width: 64rem;
 }
 
 /* Menu principal */
@@ -60,6 +61,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .grid {

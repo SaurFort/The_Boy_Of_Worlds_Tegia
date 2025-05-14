@@ -1,15 +1,13 @@
 <?php
 // author: @SaurFort
 
-require "../assets/php/utils/cookie.php";
-
 $name = readCookie("name") ?? null;
 $race = readCookie("race") ?? null;
 ?>
 
 <div>
   <h2>Introduction</h2>
-  <p>
+  <p class="text-justify">
     Après des décennies de guerre entre les <b>Kraiths</b> et les <b>Yalks</b>,
     une paix fragile a été instauré par les reines <b>Louna</b> et <b>Alona</b>.
     Cependant, les tensions persistent. Les <b>Kraiths</b>, peuple humanoïde au
@@ -18,7 +16,7 @@ $race = readCookie("race") ?? null;
     entre ceux qui veulent coexister avec les <b>Kraiths</b> et ceux qui jugent
     les <b>Kraiths</b> comme inférieurs et dangereux.
   </p>
-  <p>
+  <p class="text-justify">
     <?= $name ?? "Le héros" ?>, proche de la reine<?= $race !== null ? ($race === "kraith" ? " Louna " : " Alona ") : "" ?>, <!-- Condition embriqué, équivalent de if/else, dispose de la même syntaxe en JS -->
     joue un rôle central dans la stabilisation ou la destruction de cette paix.
     Vos choix détermineront si une collaboration pourra exister entre ces deux
