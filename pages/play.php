@@ -1,8 +1,9 @@
 <?php
 // author: @SaurFort
 
-require "../assets/php/utils/cookie.php" // Le require est un équivalent de include sauf qu'il évite la répétition d'intégration
+require "../assets/php/utils/cookie.php"; // Le require est un équivalent de include sauf qu'il évite la répétition d'intégration
 
+$inGame = readCookie("inGame");
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +18,13 @@ require "../assets/php/utils/cookie.php" // Le require est un équivalent de inc
 </head>
 
 <body class="text-center">
-  <div>
-    <h1>Nouvelle partie</h1>
-    <?php include "../common/selector.html" ?>
-  </div>
+  <?php
+  if ($inGame != "true") {
+    echo "<div><h1>Nouvelle partie</h1>";
+    include "../common/selector.html";
+    echo "</div>";
+  }
+  ?>
 </body>
 
 </html>
