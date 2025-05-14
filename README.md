@@ -35,7 +35,7 @@ Vous avez démarrer votre serveur de développement PHP.
 
 ## Contrainte Technique
 
-> [!INFO]\
+> [!NOTE]\
 > Ce projet est réalisé dans le cadre du programme de spécialité NSINF de première.
 
 Nous avions comme contrainte de faire un site Internet sur le thème : **Une histoire dont vous êtes le héros**, ce qui nous a vraiment pris à coeur de faire.
@@ -44,7 +44,7 @@ Nous avions aussi interdiction d'utiliser de framework/librairie et de se servir
 
 ## Amélioration possible
 
-> [!INFO]\
+> [!NOTE]\
 > Étant donné que ce projet à été réalisé dans un laps de temps assez réduit, il y a de nombreuse voies d'amélioration, nous avons déjà exploré certaines d'entre elles
 >
 > Nous avons aussi imaginez quelques fonctionnalités qui pourrait être implémanter en plus.
@@ -55,7 +55,7 @@ Nous aurions pu implémenter un **système de sauvegarde côté serveur** avec u
 
 ### Gestion amélioré des cookies
 
-> [!INFO]\
+> [!NOTE]\
 > Actuellement ce site fonctionne pratiquement qu'avec des cookies, ce qui est une contrainte en soit car les cookies sont souvent mal vu.
 
 > [!WARNING]\
