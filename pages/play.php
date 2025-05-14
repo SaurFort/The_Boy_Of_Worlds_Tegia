@@ -3,8 +3,6 @@
 
 require "../assets/php/utils/cookie.php" // Le require est un équivalent de include sauf qu'il évite la répétition d'intégration
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +13,16 @@ require "../assets/php/utils/cookie.php" // Le require est un équivalent de inc
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../assets/style.css" />
-  <title>Ma partie</title>
+  <title>Nouvelle partie</title>
 </head>
 
-<body></body>
+<body class="text-center">
+  <div>
+    <h1>Nouvelle partie</h1>
+    <?php include "../common/selector.html" ?>
+  </div>
+</body>
 
 </html>
+
+<script src="../assets/js/play.js"></script>
