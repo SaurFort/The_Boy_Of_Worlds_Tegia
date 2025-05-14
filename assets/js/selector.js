@@ -60,11 +60,14 @@ const nomsInterdits = [
 function verifierNom() {
     let selection = document.getElementById("nomselectionner");
 
-  const nomMinuscule = selection.value.toLowerCase();
+  const nomMinuscule = selection.value;
 
-  if (nomsInterdits.includes(nomMinuscule)) {
+  if (nomsInterdits.includes(nomMinuscule.toLowerCase())) {
     alert("Ce nom est invalide, veuillez en choisir un autre...");
+    disable.button_valider
   } else {
     alert("Nom valide! Vous pouvez continuez!");
   }
+  
 }
+
