@@ -18,7 +18,7 @@ body {
   margin-left: 4rem;
   margin-right: 4rem;
   color: var(--text);
-  font-family: Impact, fantasy;
+  font-family: OCR A Std, monospace;
   background-color: var(--bg);
   font-size: 1.1rem;
 }
@@ -31,7 +31,6 @@ body {
 
   h1 {
     font-size: 4rem;
-      font-weight: 100;
   }
 }
 
@@ -71,7 +70,10 @@ body {
 .gap-1 {
   gap: 1rem;
 }
-
+.typo {
+  font-family: Impact, fantasy;
+  font-weight: 100;
+}
 /* Effet */
 
 .button:hover {
