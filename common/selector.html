@@ -13,32 +13,31 @@
   <div class="mb-1">
     <label>Sexe:</label>
     <div id="sexe_Yalk" style="opacity: 0.2">
-      <input id="a" type="radio" name="radio" />
+      <input id="0" type="radio" name="radio" disabled />
       <label for="radio">0️⃣</label>
-      <input id="b" type="radio" name="radio" />
+      <input id="1" type="radio" name="radio" disabled />
       <label for="radio">1️⃣</label>
     </div>
 
     <div id="sexe_Kraith">
-      <input type="radio" name="radio" />
+      <input id='homme'type="radio" name="radio" />
       <label for="radio">♂️</label>
-      <input type="radio" name="radio" />
+      <input id='femme'type="radio" name="radio" />
       <label for="radio">♀️</label>
     </div>
   </div>
 
   <div class="mb-1">
-    <label for="nom">Nom:</label>
-    <input
-      type="text"
-      name="nom"
-      id="nomselectionner"
-      onchange="verifierNom()"
-    />
+    <label for="nom">Pseudo:</label>
+    <input type="text" name="nom" id="nomselectionner" onchange="verifierNom()" />
   </div>
 </div>
 
+<p id="testNom">Pseudo Invalide</p>
+
+<!--<p>Nom valide</p>-->
+
 <script src="../assets/js/selector.js"></script>
-<button class="button" id="button_valider" onclick="valider();">
+<button class="button" id="boutton_valider" onclick="valider();" style="opacity: 0.2;" disabled>
   Valider ✅
 </button>
