@@ -1,4 +1,4 @@
-<!-- author: @Hakitox1004, @SaurFort (css) -->
+<!-- author: @Hakitox1004 -->
 
 <div>
   <div class="mb-1">
@@ -20,16 +20,21 @@
     </div>
 
     <div id="sexe_Kraith">
-      <input id='homme'type="radio" name="radio" />
+      <input id="homme" type="radio" name="radio" />
       <label for="radio">♂️</label>
-      <input id='femme'type="radio" name="radio" />
+      <input id="femme" type="radio" name="radio" />
       <label for="radio">♀️</label>
     </div>
   </div>
 
   <div class="mb-1">
     <label for="nom">Pseudo:</label>
-    <input type="text" name="nom" id="nomselectionner" onchange="verifierNom()" />
+    <input
+      type="text"
+      name="nom"
+      id="nomselectionner"
+      onchange="verifierNom()"
+    />
   </div>
 </div>
 
@@ -38,6 +43,12 @@
 <!--<p>Nom valide</p>-->
 
 <script src="../assets/js/selector.js"></script>
-<button class="button" id="boutton_valider" onclick="valider();" style="opacity: 0.2;" disabled>
+<button
+  class="button"
+  id="boutton_valider"
+  onclick="valider();"
+  style="opacity: 0.2"
+  disabled
+>
   Valider ✅
 </button>

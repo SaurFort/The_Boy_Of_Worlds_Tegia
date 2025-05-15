@@ -1,10 +1,11 @@
+// author: @Hakitox1004
 //ici, on récupere les valeurs données depuis le selecteur pour tester
 // voir si le joueur a choisit "Kraith" ou bien "Yalk".
 //apres cela on determine quel champs de validation de sexe doit etre desactivé.
 
 function sexes() {
-  let sexe0 = document.getElementById('0');
-  let sexe1 = document.getElementById('1');
+  let sexe0 = document.getElementById('0')
+  let sexe1 = document.getElementById('1')
   let hommesexe = document.getElementById('homme')
   let femmesexe = document.getElementById('femme')
 
@@ -12,10 +13,7 @@ function sexes() {
   let kraithSexe = document.getElementById('sexe_Kraith')
   let choix = document.getElementById('Espèce')
 
-  
-
   if (choix.value == '1') {
-
     sexe0.disabled = true
     sexe1.disabled = true
     hommesexe.disabled = false
@@ -25,7 +23,6 @@ function sexes() {
   }
 
   if (choix.value == '2') {
-    
     sexe0.disabled = false
     sexe1.disabled = false
     hommesexe.disabled = true
@@ -79,32 +76,31 @@ const nomsInterdits = [
   'motherfucker',
   'mother fucker',
   'le mother fucker',
-  "pute",
-  "benladen",
+  'pute',
+  'benladen',
   'ben laden',
-  "mao",
-  "sex",
-  "sexe",
-  "pedo",
-  "nazi",
-  "terroriste",
-  "fuck",
-  "shit",
-  "pute",
-  "connard",
-  "batard",
-  "enculé",
-  "fdp",
-  "salot",
-  "raciste",
-  "coccinelle",
-  "frauline",
-  "kkk",
+  'mao',
+  'sex',
+  'sexe',
+  'pedo',
+  'nazi',
+  'terroriste',
+  'fuck',
+  'shit',
+  'pute',
+  'connard',
+  'batard',
+  'enculé',
+  'fdp',
+  'salot',
+  'raciste',
+  'coccinelle',
+  'frauline',
+  'kkk',
   'negga',
   'neggro',
   'noir',
-  "bite",
-  
+  'bite',
 ]
 
 function verifierNom() {
@@ -115,7 +111,7 @@ function verifierNom() {
 
   if (nomsInterdits.includes(nomMinuscule.toLowerCase())) {
     boutton_valider.style.opacity = 0.2
-    button_valider.disabled = true
+    boutton_valider.disabled = true
     testNom.innerText = 'Votre pseudo est invalide'
     //alert('Ce nom est invalide, veuillez en choisir un autre...')
   } else {
