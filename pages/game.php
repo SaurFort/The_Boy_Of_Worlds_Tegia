@@ -5,6 +5,12 @@ $name = readCookie("name") ?? null;
 $race = readCookie("race") ?? null;
 $gender = readCookie("gender") ?? "male";
 //$chapter = readCookie("chapter") ?? "1";
+
+// On vérifie si nos cookies contenant le nom et la race du joueur sont remplie
+// Le isset de PHP prend en compte les valeurs null et les chaînes de caractères vide
+if (!isset($name) || !isset($race)) {
+  header("Location: /"); // Ici on redirige vers la page d'accueil
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +32,7 @@ $gender = readCookie("gender") ?? "male";
   }
   ?>
 
-  <button class="button" id="nextBtn" onclick="nextPage()">Suivant</button>
+  <a class="button hidden" id="nextBtn" onclick="nextPage()">Suivant</a>
 </body>
 
 <script src="../assets/js/chapterSelector.js"></script>
