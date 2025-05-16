@@ -111,12 +111,15 @@ function verifierNom() {
 
   if (nomsInterdits.includes(nomMinuscule.toLowerCase())) {
     boutton_valider.style.opacity = 0.2
+
     boutton_valider.disabled = true
-    testNom.innerText = 'Votre pseudo est invalide'
+    testNom.innerText = '⚠️ Pseudo invalide'
+
     //alert('Ce nom est invalide, veuillez en choisir un autre...')
   } else {
+    testNom.innerText = '✅ Pseudo valide'
     boutton_valider.style.opacity = 1.0
     boutton_valider.disabled = false
-    alert('Nom valide! Vous pouvez continuez!')
+    //alert('Nom valide! Vous pouvez continuez!')
   }
 }
