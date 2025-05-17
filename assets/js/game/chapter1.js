@@ -4,13 +4,12 @@
  */
 
 // Variables lié au chapitre 1
-//const chapterOne = document.getElementById('chapter1')
 const chapterOneNextSceneBtn = document.getElementById('chapterOneNext')
 let chapterOneScene = 0
 
 // Constante lié à la game complète
 
-function nextScene() {
+function chapterOneNextScene() {
   document.getElementById(`chapter1Scene${chapterOneScene}`).classList =
     'hidden'
 
@@ -18,9 +17,29 @@ function nextScene() {
   document.getElementById(`chapter1Scene${chapterOneScene}`).classList = ''
 
   chapterOneNextSceneBtn.classList += ' hidden'
+
+  if (chapterOneScene === 1) cOneSceneOne()
+}
+
+/**
+ * Affiche le bouton en différé.
+ *
+ *  @param {int} duration durée en ms
+ */
+function btnTimeout(duration) {
+  chapterOneNextSceneBtn.classList += ' hidden'
+  setTimeout(() => (chapterOneNextSceneBtn.classList = 'button'), duration)
+}
+
+function cOneSceneOne() {
+  while (!haveChoose) {
+    setTimeout(() => console.info("Player haven't choose yet"), 1000)
+  }
+
+  document.getElementById('chapter1Scene1Choices').classList += ' hidden'
+
+  btnTimeout(1000)
 }
 
 // Code plus générale que je veux executer dès le chargement du script
-
-// Ce timeout sert au chargement de la page pour que le titre apparaisse en premier et laisse 2s avant d'afficher le bouton
-setTimeout(() => (chapterOneNextSceneBtn.classList = 'button'), 2000)
+btnTimeout(2000)

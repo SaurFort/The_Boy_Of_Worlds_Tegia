@@ -1,6 +1,7 @@
 // author: @SaurFort
 let chapter = 1
 let karma = 0
+let haveChoose = false
 
 function nextPage() {
   const nextBtn = document.getElementById('nextBtn')
@@ -13,4 +14,8 @@ function nextPage() {
   if (chapter > 7) chapter = 1
 
   document.getElementById(`chapter${chapter}`).classList = ''
+}
+
+function choose() {
+  haveChoose = true
 }

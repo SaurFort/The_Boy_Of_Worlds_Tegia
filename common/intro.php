@@ -17,7 +17,7 @@ $race = readCookie("race") ?? null;
     les <b>Kraiths</b> comme inférieurs et dangereux.
   </p>
   <p class="text-justify">
-    <?= $name ?? "Le héros, enfin vous" ?>, vous êtes proche de la reine<?= $race !== null ? ($race === "kraith" ? " Louna" : " Alona") : "" ?>, <!-- Condition embriqué, équivalent de if/else, dispose de la même syntaxe en JS -->
+    <?= $name ?? "Le héros, enfin vous" ?>, vous êtes proche de la reine<?= $race !== null ? ($race === "kraith" ? " Louna" : " Alona") : "" ?>, <!-- Condition embriqué, dispose de la même syntaxe en JS -->
     vous jouez un rôle essentiel dans la stabilisation ou la destruction de cette paix.
     Vos choix détermineront si une collaboration pourra exister entre ces deux
     peuples ou si la guerre reprendra de plus belle.

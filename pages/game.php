@@ -11,6 +11,10 @@ $gender = readCookie("gender") ?? "male";
 if (!isset($name) || !isset($race)) {
   header("Location: /"); // Ici on redirige vers la page d'accueil
 }
+
+$queen = $race === "kraith" ? "Louna" : "Alona";
+$properRace = $race === "kraith" ? "Kraiths" : "Yalks";
+$oppositeRace = $race === "kraith" ? "Yalks" : "Kraiths";
 ?>
 
 <!DOCTYPE html>
