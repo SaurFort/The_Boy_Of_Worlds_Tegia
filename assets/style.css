@@ -91,6 +91,10 @@ img {
   display: none;
 }
 
+.qte-active {
+  background-color: #ff0000;
+}
+
 /* Effet */
 .button:hover {
   box-shadow: 5px 5px 10px #000;
