@@ -56,7 +56,7 @@ function testQte() {
   qteTestDiv.classList = ''
 
   qteState.isTest = true
-  difficulty = 1
+  difficulty = 2
   qteState.success = false
 
   const test = generateQTE()
@@ -116,11 +116,11 @@ function updateDifficulty() {
 }
 
 function generateQTE() {
-  // Délai aléatoire entre 2 et 10 secondes (en ms)
-  const delay = Math.floor(Math.random() * (10_000 - 2_000 + 1)) + 2_000
+  // Délai aléatoire entre 1,5 et 10 secondes (en ms)
+  const delay = Math.floor(Math.random() * (10_000 - 1_500 + 1)) + 1_500
 
-  // Durée du QTE en fonction de la difficulté (entre 5000ms à 500ms)
-  const qteDuration = 5_000 - ((difficulty - 1) / 9) * (5_000 - 500)
+  // Durée du QTE en fonction de la difficulté (entre 3000ms et 250ms)
+  const qteDuration = 3_000 - ((difficulty - 1) / 9) * (3_000 - 250)
 
   return {
     delay, // Délai avant le début du QTE (en ms)
