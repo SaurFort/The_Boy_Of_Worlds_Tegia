@@ -93,6 +93,7 @@ img {
 
 .qte-active {
   background-color: #ff0000;
+  transition: inherit;
 }
 
 /* Effet */

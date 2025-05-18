@@ -12,10 +12,10 @@ const qteTestBtn = document.getElementById('qteTestBtn')
 const qteBtn = document.getElementById('qteBtn')
 
 // Récupération de la difficulté du QTE (échelle de 1 à 10)
-let difficulty = updateDifficulty()
+let difficulty // Ici je ne définit pas la difficulté directement pour permettre de la modifier avant de lancer le QTE
 
-let isActive = false
-let success = false
+let isActive = false // Sert à définir si nous sommes dans la phase active du QTE
+let success = false // Sert à savoir si le joueur a réussi à appuyer durant la phase active
 
 function testQte() {
   qteExplainationDiv.classList = 'hidden'
@@ -23,6 +23,7 @@ function testQte() {
 
   success = false
 
+  difficulty = 1
   const test = generateQTE()
 
   document.getElementById('testQteTime').innerText = `${
@@ -32,22 +33,43 @@ function testQte() {
   setTimeout(() => {
     isActive = true
     qteTestBtn.classList += ' qte-active'
-    setTimeout(() => (isActive = false), test.qteDuration)
+    setTimeout(() => {
+      qteTestBtn.classList = 'button'
+      isActive = false
+      validQte()
+    }, test.qteDuration)
   }, test.delay)
 }
 
-function validTestQte() {
+function qte() {
+  qteExplainationDiv.classList = 'hidden'
+  qteDiv.classList = ''
+
+  difficulty = updateDifficulty()
+  success = false
+
+  const test = generateQTE()
+
+  setTimeout(() => {
+    isActive = true
+    qteBtn.classList += ' qte-active'
+    setTimeout(() => {
+      qteBtn.classList = 'button'
+      isActive = false
+      validQte()
+    }, test.qteDuration)
+  }, test.delay)
+}
+
+function validQte() {
   if (isActive) success = true
 
   qteResult.innerText = success
     ? 'Bravo ! Vous avez réussi'
     : 'Dommage ! Vous avez raté'
   qteTestDiv.classList = 'hidden'
+  qteDiv.classList = 'hidden'
 }
-
-function qte() {}
-
-function validQte() {}
 
 function updateDifficulty() {
   return parseInt(document.getElementById('difficulty').innerText)
