@@ -16,7 +16,7 @@
       </p>
     </div>
     <select class="mb-1" id="scene1Choice" name="scene1Choice" oninput="sceneOne()">
-      <option value="">-- Choisissez votre dialogue --</option>
+      <option value="" selected disabled>-- Choisissez votre dialogue --</option>
       <option value="0">Je ferais tout pour préserver la paix.</option>
       <option value="1">Cette paix est une illusion. Nous devons nous préparer à la guerre.</option>
       <option value="2">Je vous suivrais, Majesté. Dites-moi simplement ce que vous attendez de moi.</option>
@@ -44,7 +44,7 @@
       <p class="hidden" id="dialog4"><b><?= $race === "kraith" ? "R-2D3" : "Elrin" ?> - </b></p>
       <p class="hidden" id="dialog5"><em>En retournant à la salle du trône, <?= $queen ?> </em></p>
       <select id="scene2Choice" name="scene2Choice" oninput="sceneTwoChoice()">
-        <option value="">-- Que souhaitez-vous faire ? --</option>
+        <option value="" selected disabled>-- Que souhaitez-vous faire ? --</option>
         <option value="0">*(Essayer de proposer un compromis)*</option>
         <option value="1">*(Essayer d'envenimer la situation)*</option>
       </select>

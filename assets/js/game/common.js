@@ -3,7 +3,7 @@ const chapter = parseInt(document.getElementById('chapter').innerText)
 let karma = parseInt(document.getElementById('karma').innerText)
 let scene = 0
 
-console.log(`Actually at chapter ${chapter} with ${karma} of karma`)
+console.log(`Chapter ${chapter} with ${karma} karma`)
 
 function nextScene() {
   document.getElementById(`scene${scene}`).classList = 'hidden'
