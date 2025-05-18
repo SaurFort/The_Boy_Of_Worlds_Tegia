@@ -109,7 +109,10 @@ function verifierNom() {
 
   const nomMinuscule = selection.value
 
-  // Todo: Rajoute une vérification sur la longueur du nom pour faire que si jamais on est en dessous de 3 caractères dire que le pseudo est invalide et si plus de 25 caractères faire de même
+  
+  //Rajoute une vérification sur la longueur du nom pour faire que si jamais 
+  // on est en dessous de 3 caractères dire que le pseudo est invalide et si 
+  // plus de 25 caractères faire de même
 
   if (nomsInterdits.includes(nomMinuscule.toLowerCase())) {
     boutton_valider.style.opacity = 0.2
