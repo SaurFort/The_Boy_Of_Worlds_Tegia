@@ -1,11 +1,11 @@
-<div>
+<div id="qte">
   <p class="hidden" id="difficulty">5</p>
   <div id="qteExplaination">
     <h3>QTE</h3>
     <p class="text-justify">
       Dans un QTE les règles sont simples, vous avez un bouton devant vous, et il faut appuyer dessus au bon moment. Comment savoir que c'est le bon moment ?<br/>
       Et bien le bouton changera de couleur, et en fonction de la difficulté du QTE, vous aurez plus ou moins de temps pour appuyer dessus.<br/>
-      Vous voulez essayer ?
+      Vous voulez vous entraîner avant de commencer ?
     </p>
     <div class="text-center">
       <button class="button success" onclick="testQte()">Oui</button>
@@ -18,8 +18,8 @@
       <p class="text-justify">Pour ce QTE, vous aurez <span id="testQteTime">X secondes</span> pour le réaliser.</p>
       <button class="button mx-auto" id="qteTestBtn" onclick="validQte()">QTE</button>
     </div>
-    <div class="hidden" id="qte">
-      <p class="text-justify">C'est parti !</p>
+    <div class="hidden" id="qteGame">
+      <p class="text-justify">C'est parti ! Le QTE s'activera d'une minute à l'autre.</p>
       <button class="button mx-auto" id="qteBtn" onclick="validQte()">QTE</button>
     </div>
   </div>

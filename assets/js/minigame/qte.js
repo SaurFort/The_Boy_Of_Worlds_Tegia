@@ -2,7 +2,7 @@
 // Récupération des trois parties du QTE
 const qteExplainationDiv = document.getElementById('qteExplaination')
 const qteTestDiv = document.getElementById('qteTest')
-const qteDiv = document.getElementById('qte')
+const qteDiv = document.getElementById('qteGame')
 
 // Récupération de la zone de texte où l'on affiche le résultat
 const qteResult = document.getElementById('qteInfo')
@@ -14,16 +14,51 @@ const qteBtn = document.getElementById('qteBtn')
 // Récupération de la difficulté du QTE (échelle de 1 à 10)
 let difficulty // Ici je ne définit pas la difficulté directement pour permettre de la modifier avant de lancer le QTE
 
-let isActive = false // Sert à définir si nous sommes dans la phase active du QTE
-let success = false // Sert à savoir si le joueur a réussi à appuyer durant la phase active
+const qteState = {
+  _isTest: false, // Permet de savoir si l'utilisateur est en train de faire le QTE d'entrainement
+  _isActive: false, // Permet de savoir si nous sommes dans la phase active du QTE
+  _success: false, // Permet de savoir si l'utilisateur à réussi le QTE
+  onSuccess: null, // Permet de gérer la logique en cas de réussite
+  onFail: null, // Permet de gérer la logique en cas d'échec
+
+  get isTest() {
+    return this._isTest
+  },
+  set isTest(value) {
+    this._isTest = value
+  },
+
+  get isActive() {
+    return this._isActive
+  },
+  set isActive(value) {
+    this._isActive = value
+    if (
+      !this._isTest &&
+      !this._isActive &&
+      !this._success &&
+      typeof this.onFail === 'function'
+    )
+      this.onFail()
+  },
+
+  get success() {
+    return this._success
+  },
+  set success(value) {
+    this._success = value
+    if (!this._isTest && typeof this.onSuccess === 'function') this.onSuccess()
+  },
+}
 
 function testQte() {
   qteExplainationDiv.classList = 'hidden'
   qteTestDiv.classList = ''
 
-  success = false
-
+  qteState.isTest = true
   difficulty = 1
+  qteState.success = false
+
   const test = generateQTE()
 
   document.getElementById('testQteTime').innerText = `${
@@ -31,12 +66,16 @@ function testQte() {
   } seconde${test.qteDuration > 1 ? 's' : ''}`
 
   setTimeout(() => {
-    isActive = true
+    qteState.isActive = true
     qteTestBtn.classList += ' qte-active'
     setTimeout(() => {
       qteTestBtn.classList = 'button'
-      isActive = false
+      qteState.isActive = false
       validQte()
+      setTimeout(() => {
+        qteExplainationDiv.classList = ''
+        qteResult.innerText = ''
+      }, 3000)
     }, test.qteDuration)
   }, test.delay)
 }
@@ -45,26 +84,27 @@ function qte() {
   qteExplainationDiv.classList = 'hidden'
   qteDiv.classList = ''
 
+  qteState.isTest = false
   difficulty = updateDifficulty()
-  success = false
+  qteState._success = false
 
   const test = generateQTE()
 
   setTimeout(() => {
-    isActive = true
+    qteState.isActive = true
     qteBtn.classList += ' qte-active'
     setTimeout(() => {
       qteBtn.classList = 'button'
-      isActive = false
+      qteState.isActive = false
       validQte()
     }, test.qteDuration)
   }, test.delay)
 }
 
 function validQte() {
-  if (isActive) success = true
+  if (qteState.isActive) qteState.success = true
 
-  qteResult.innerText = success
+  qteResult.innerText = qteState.success
     ? 'Bravo ! Vous avez réussi'
     : 'Dommage ! Vous avez raté'
   qteTestDiv.classList = 'hidden'

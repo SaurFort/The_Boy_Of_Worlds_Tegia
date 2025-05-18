@@ -31,7 +31,7 @@ function hideNextBtn() {
 function nextPage() {
   document.cookie = `karma=${karma}; path=/`
   document.cookie = `chapter=${chapter + 1}; path=/`
-  alert(document.cookie)
+  //alert(document.cookie)
   window.location.reload()
 }
 

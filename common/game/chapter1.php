@@ -27,10 +27,10 @@
     </p>
   </div>
   <div class="hidden" id="scene2">
-    <img src="../../assets/images/<?= $race ?>/chapter1/s_trone.png" />
+    <img src="../../assets/images/<?= $race ?>/chapter1/meeting.png" />
     <div id="dialog3">
-      <p class="text-justify">
-        <em>Vous entrez dans la salle de réunion au moment où les voix s'élèvent.</em>
+      <p class="text-center">
+        <em>Vous entrez dans la salle de réunion au moment où les voix s'élèvent. En entrant dans la salle, vous voyez 3 Kraiths <?= $race === 'kraith' ? ", vous reconnaissez : le commandant Khoran, le conseiller Elrin et votre ami Varek" : "" ?>, ainsi que 2 Yalks <?php $race === 'yalk' ? ", vous reconnaissez : le commandant R-2D1 ainsi et le conseiller R-2D3" : "" ?></em>
       </p>
       <p class="text-justify">
         <b>Khoran - </b> Ils veulent nos ressources, et il veulent imposer leurs machines dans nos foyers !
@@ -38,8 +38,19 @@
       <p class="text-justify">
         <b>R2D1 - </b> Votre peuple a signé un traité. Ce traité comprenait le partage de nos ressources ! Vos émotions sont des interférences innaceptable dans le maintient de la paix.
       </p>
+      <a class="button" onclick="sceneTwo()">Lancer le QTE</a>
+    </div>
+    <div class="hidden" id="dialogBox4">
+      <p class="hidden" id="dialog4"><b><?= $race === "kraith" ? "R-2D3" : "Elrin" ?> - </b></p>
+      <p class="hidden" id="dialog5"><em>En retournant à la salle du trône, <?= $queen ?> </em></p>
+      <select id="scene2Choice" name="scene2Choice" oninput="sceneTwoChoice()">
+        <option value="">-- Que souhaitez-vous faire ? --</option>
+        <option value="0">*(Essayer de proposer un compromis)*</option>
+        <option value="1">*(Essayer d'envenimer la situation)*</option>
+      </select>
     </div>
   </div>
+  <?php include "../common/minigame/qte.html" ?>
   <a id="nextScene" class="button hidden" onclick="nextScene()">Suivant</a>
 </div>
 

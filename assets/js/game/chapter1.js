@@ -1,12 +1,14 @@
 // author: @SaurFort
+// Au chargement de la page, on cache le QTE
+const qteGame = document.getElementById('qte')
+qteGame.classList = 'hidden'
+const qteDifficulty = document.getElementById('difficulty')
 
 function sceneOne() {
   const choiceSelect = document.getElementById('scene1Choice')
   const choice = choiceSelect.value
   const dialogOne = document.getElementById('dialog1')
   const dialogTwo = document.getElementById('dialog2')
-
-  console.log(choice)
 
   if (!choice || choice > 3 || choice < 0) {
     hideNextBtn()
@@ -36,4 +38,91 @@ function sceneOne() {
   choiceSelect.classList += ' hidden'
 
   btnTimeout(5000)
+}
+
+function sceneTwo() {
+  document.getElementById('dialog3').classList += ' hidden'
+  qteGame.classList = ''
+  qteDifficulty.innerText = 7
+}
+
+function sceneTwoDialog(success = false) {
+  const dialog4 = document.getElementById('dialog4')
+  const dialog5 = document.getElementById('dialog5')
+  document.getElementById('dialogBox4').classList = ''
+
+  if (success) {
+    return
+  }
+
+  dialog5.classList = 'text-center'
+  dialog4.classList = 'text-justify'
+  document.getElementById('scene2Choice').classList = 'hidden'
+
+  if (karma >= 0) {
+    dialog5.innerHTML +=
+      'est satisfaite de ce que vous avez fait durant la réunion avec les émissaires.'
+    dialog4.innerHTML +=
+      "Votre compromis me semble correcte. En espérant que cela pourra permettre une collaboration durable, et que personne n'essaiera de tout gâcher."
+    karma += 2
+  } else {
+    dialog5.innerHTML +=
+      "n'est pas contente de ce que vous avez fait durant la réunion avec les émissaires."
+    dialog4.innerHTML +=
+      "Vous n'êtes en rien utile à cette réunion, vous ne faites que jetez de l'huile sur le feu."
+    karma -= 2
+  }
+
+  setTimeout(
+    () => (document.getElementById('nextPage').classList = 'button'),
+    2000
+  )
+}
+
+function sceneTwoChoice() {
+  const choiceSelect = document.getElementById('scene2Choice')
+  const choice = parseInt(choiceSelect.value)
+  const dialog4 = document.getElementById('dialog4')
+  const dialog5 = document.getElementById('dialog5')
+  dialog5.classList = 'text-center'
+  dialog4.classList = 'text-justify'
+
+  if (!choice && choice < 1 && choice > 2) return
+
+  if (choice === 0) {
+    dialog5.innerHTML +=
+      'est satisfaite de ce que vous avez fait durant la réunion avec les émissaires.'
+    dialog4.innerHTML +=
+      "Votre compromis me semble correcte. En espérant que cela pourra permettre une collaboration durable, et que personne n'essaiera de tout gâcher."
+    karma += 2
+  } else {
+    dialog5.innerHTML +=
+      "n'est pas contente de ce que vous avez fait durant la réunion avec les émissaires."
+    dialog4.innerHTML +=
+      "Vous n'êtes en rien utile à cette réunion, vous ne faites que jetez de l'huile sur le feu."
+    karma -= 2
+  }
+
+  choiceSelect.classList = 'hidden'
+
+  setTimeout(
+    () => (document.getElementById('nextPage').classList = 'button'),
+    2000
+  )
+}
+
+// Ceci est un callback pour être capable de gérer la réussite du QTE
+qteState.onSuccess = () => {
+  setTimeout(() => {
+    qteResult.innerText = ''
+    sceneTwoDialog(true)
+  }, 2000)
+}
+
+// Ceci est un callback pour être capable de gérer l'échec du QTE
+qteState.onFail = () => {
+  setTimeout(() => {
+    qteResult.innerText = ''
+    sceneTwoDialog(false)
+  }, 2000)
 }
