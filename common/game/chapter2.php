@@ -7,7 +7,7 @@
     <div id="dialog1">
       <p class="text-center">
         <em>
-          Un messager entre en courant dans la salle du trone. Vous écoutez attentivement ce qu'il s'apprete à dire
+          Un messager entre en courant dans la salle du trone. Vous écoutez attentivement ce qu'il s'apprète à dire.
         </em>
       </p>
       <p class="text-justify">
@@ -19,7 +19,7 @@
     </div>
     <div class="hidden" id="dialog2">
       <p class="text-center">
-        <em>La salle du trône devient silencieuse... Le silence en devient preque lourd.</em>
+        <em>La salle du trône devient silencieuse... Le silence en devient presque lourd.</em>
       </p>
       <p class="text-justify">
         <b><?= $queen ?> - </b>Le peuple veut la guerre. Mais je ne le tolérerai pas. <?= $name ?>... J'ai besoin que tu ailles mener ton enquête là-bas. Essaie de trouver les coupable. Je te laisse carte blanche.
@@ -32,7 +32,7 @@
     <div id="dialog3">
       <p class="text-center">
         <em>
-          Vous êtes escorté jusqu'à l'avant poste <?= $oppositeRace ?> par une petite patrouille. Plus vous approchez de l'avant poste, plus l'odeur des cendres vous prends. A l'intérieur du camp, presque tout est en ruine. Les quelques survivants restant continue de fouiller les décombres. Les soldats <?= $oppositeRace ?> sont tendues.
+          Vous êtes escorté jusqu'à l'avant poste <?= $oppositeRace ?> par une petite patrouille. Plus vous approchez de l'avant poste, plus l'odeur des cendres vous prends. A l'intérieur du camp, presque tout est en ruine. Les quelques survivants restant continuent de fouiller les décombres. Les soldats <?= $oppositeRace ?> sont tendus.
         </em>
       </p>
       <p class="text-justify">

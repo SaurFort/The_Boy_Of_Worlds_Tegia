@@ -110,6 +110,8 @@ function verifierNom() {
   const nomMinuscule = selection.value
 
   
+  if (nomMinuscule.length >= 3 && <= 25){
+     
   //Rajoute une vérification sur la longueur du nom pour faire que si jamais 
   // on est en dessous de 3 caractères dire que le pseudo est invalide et si 
   // plus de 25 caractères faire de même
@@ -128,3 +130,7 @@ function verifierNom() {
     //alert('Nom valide! Vous pouvez continuez!')
   }
 }
+
+  }
+ 
+ 

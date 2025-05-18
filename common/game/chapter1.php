@@ -6,7 +6,7 @@
     <img src="../../assets/images/<?= $race ?>/chapter1/s_trone.png" />
     <div id="dialog1">
       <p class="text-justify">
-        <b><?= $queen ?> - </b><?= $race === "kraith" ? "Notre peuple n'a jamais connue une paix aussi fragile. " : "" ?>Les <?= $oppositeRace ?> et nous avons mis fin à une guerre qui a durer bien trop longtemps, mais dans nos rues, certains veulent relancer les hostilités.
+        <b><?= $queen ?> - </b><?= $race === "kraith" ? "Notre peuple n'a jamais connu une paix aussi fragile. " : "" ?>Les <?= $oppositeRace ?> et nous avons mis fin à une guerre qui a durée bien trop longtemps, mais dans nos rues, certains veulent relancer les hostilités.
       </p>
       <p class="text-justify">
         <b>Conseiller <?= $race === "kraith" ? "Elrin" : "R-2D3" ?> - </b>Majesté, des éclats de voix ont eu lieu ce matin entre marchands <?= $properRace ?> et émissaires <?= $oppositeRace ?> sur le marché. Les insultes se sont transformées en menaces.
@@ -16,7 +16,7 @@
       </p>
     </div>
     <select class="mb-1" id="scene1Choice" name="scene1Choice" oninput="sceneOne()">
-      <option value="" selected disabled>-- Choisissez votre dialogue --</option>
+      <option value="" selected disabled>- Choisissez votre dialogue -</option>
       <option value="0">Je ferais tout pour préserver la paix.</option>
       <option value="1">Cette paix est une illusion. Nous devons nous préparer à la guerre.</option>
       <option value="2">Je vous suivrais, Majesté. Dites-moi simplement ce que vous attendez de moi.</option>
@@ -36,7 +36,7 @@
         <b>Khoran - </b> Ils veulent nos ressources, et il veulent imposer leurs machines dans nos foyers !
       </p>
       <p class="text-justify">
-        <b>R2D1 - </b> Votre peuple a signé un traité. Ce traité comprenait le partage de nos ressources ! Vos émotions sont des interférences innaceptable dans le maintient de la paix.
+        <b>R2D1 - </b> Votre peuple a signé un traité. Ce traité comprenait le partage de nos ressources! Vos émotions sont des interférences innaceptables dans le maintient de la paix.
       </p>
       <a class="button" onclick="sceneTwo()">Lancer le QTE</a>
     </div>
