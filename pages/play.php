@@ -1,7 +1,7 @@
 <?php
 // author: @SaurFort
 
-require "../assets/php/utils/cookie.php"; // Le require est un équivalent de include sauf qu'il évite la répétition d'intégration
+require "../assets/php/utils/cookie.php"; // Le require est un équivalent à la fonction include de PHP, cependant il demande que le fichier soit à tout prix présent.
 
 $inGame = readCookie("inGame");
 ?>

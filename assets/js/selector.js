@@ -134,7 +134,15 @@ function verifierNom() {
 
 // author: @SaurFort
 // J'ai codé cette fonction car on vient jouer avec les cookies
+// On enregistre pas le genre choisi par le joueur car il n'est pas utile x)
 function valid() {
-  const species = document.getElementById('Espèce').value
-  const sexe = document.getElementById('radio').value
+  const race = document.getElementById('Espèce').value
+  const name = document.getElementById('nomselectionner').value
+
+  document.cookie = `inGame=true; path=/`
+  document.cookie = `race=${race == 1 ? 'kraith' : 'yalk'}; path=/`
+  document.cookie = `name=${name}; path=/`
+  document.cookie = `chapter=1; path=/`
+  document.cookie = `karma=0; path=/`
+  window.location.reload()
 }

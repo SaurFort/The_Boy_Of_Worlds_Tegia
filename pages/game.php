@@ -10,7 +10,6 @@ if (!isset($name) || !isset($race)) {
   header("Location: /"); // Ici on redirige vers la page d'accueil
 }
 
-$gender = readCookie("gender") ?? "male";
 $chapter = readCookie("chapter") ?? "1";
 $karma = (int) readCookie("karma") ?? 0;
 
