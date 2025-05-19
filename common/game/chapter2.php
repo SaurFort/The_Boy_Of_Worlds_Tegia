@@ -50,6 +50,40 @@
         <option id="investigationChoice3" value="3">*(Observer les fragments <?= $race === 'kraith' ? "d'armure Kraiths" : 'de membres Yalks' ?>.)*</option>
       </select>
     </div>
+    <div class="hidden" id="investigation1">
+      <p class="text-center">
+        <em>Vous approchez des témoins et vous leur demandez ce qu'ils ont vu.</em>
+      </p>
+      <p class="text-justify">
+        <b>Témoin 1 - </b>Au début, 2 personnes sont arrivé en courant vers l'avant poste. Puisqu'ils avaient l'air en panique, les soldats les ont laissé rentré pour pouvoir comprendre ce qu'il se passait. Et c'est là qu'une explosion a eu lieu dans le bureau du chef de l'avant poste.
+      </p>
+      <p class="text-justify">
+        <b>Témoin 2 - </b>J'ai vu les 2 personnes s'enfuirent par cette porte sur le côté. Faites tout ce que vous pouvez, j'ai perdu un ami à cause d'eux !
+      </p>
+      <p class="text-center">
+        <em>Le troisième témoin est encore sous le choc vous n'en tirerai rien.</em>
+      </p>
+      <a class="button" onclick="investigationChoiceOne()">Suivant</a>
+    </div>
+    <div class="hidden" id="investigation2">
+      <p class="text-center">
+        <em>Vous suivez la piste donné par le Témoin 2, la piste est facile à suivre avec toutes ces traces de sang. Puis vous arrivez devant une grotte.</em>
+      </p>
+      <select id="investigationSelectTwo" name="investigationSelectTwo" oninput="investigationTwoSelect()">
+        <option value="" selected disabled>-- Que souhaitez-vous faire ? --</option>
+        <option value="1">*(Entrer dans la grotte)*</option>
+        <option value="2">*(Faire demi-tour)*</option>
+      </select>
+      <div class="hidden" id="">
+        <a class=" button" onclick="investigationChoiceTwo()">Suivant</a>
+      </div>
+    </div>
+    <div class="hidden" id="investigation3">
+      <p class="text-center">
+        <em><?= $race === 'kraith' ? 'Le commandant R-2D1 ' : 'Le commandant Khoran ' ?>vous tends les fragments. Vous reconnaissez <?= $race === 'kraith' ? "l'armure des recrues Kraiths" : "les membres d'un serviteur Yalks" ?>.</em>
+      </p>
+      <a class="button" onclick="investigationChoiceThree()">Suivant</a>
+    </div>
     <select id="choice1" name="choice1" oninput="sceneTwo()">
       <option value="" selected disabled>-- Sélectionnez votre réponse --</option>
       <option value="0">Je vais mener mon enquête. Nous ne ferons rien sans preuve.</option>
