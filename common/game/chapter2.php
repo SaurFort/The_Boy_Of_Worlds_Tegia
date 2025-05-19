@@ -1,7 +1,10 @@
 <div>
+  <!-- Titre du chapitre -->
   <div id="scene0">
     <h1>Chapitre 2 - Ombres de la Discorde</h1>
   </div>
+
+  <!-- Scene 1 -->
   <div class="hidden" id="scene1">
     <img src="../../assets/images/<?= $race ?>/chapter1/s_trone.png" />
     <div id="dialog1">
@@ -27,6 +30,8 @@
     </div>
     <a class="button" id="nextDialog" onclick="sceneOne()">Suivant</a>
   </div>
+
+  <!-- Scene 2 -->
   <div class="hidden" id="scene2">
     <img src="../../assets/images/<?= $race ?>/chapter2/harkan_bridge.png" />
     <div id="dialog3">
@@ -79,10 +84,12 @@
         <p class="text-center">
           <em>Vous entez dans la grotte, l'humidité dans cette grotte est très élevé.</em>
         </p>
-        <p>
-          <em>En avançant dans la grotte vous tombez sur un <?= $properRace ?></em>
+        <p class="text-center">
+          <em>
+            En avançant dans la grotte vous tombez sur un <?= $properRace ?>, ainsi qu'un deuxième <?= $properRace ?> mais qui semble mort. Ils se révèlent que le <?= $properRace ?> que vous venez de trouver et l'un des 2 responsables de l'attentat. Vous allez désormais le traîner devant la justice.
+          </em>
         </p>
-        <a class="button" onclick="investigationPartTwoOne()">Suivant</a>
+        <a class="button" onclick="nextScene()">Suivant</a>
       </div>
       <div class="hidden" id="investigationPart2Choice2">
         <p class="text-center">
@@ -105,7 +112,11 @@
       <option value="3">*(Rester silencieux et observer les ruines.)*</option>
     </select>
   </div>
+
+  <!-- Scene 3 -->
   <div class="hidden" id="scene3"></div>
+
+  <!-- Scene 4 -->
   <div class="hidden" id="scene4"></div>
   <a id="nextScene" class="button hidden" onclick="nextScene()">Suivant</a>
 </div>

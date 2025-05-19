@@ -4,6 +4,8 @@ const investigationOne = document.getElementById('investigation1')
 const investigationTwo = document.getElementById('investigation2')
 const investigationThree = document.getElementById('investigation3')
 
+let isCatch = false
+
 function sceneOne() {
   document.getElementById('nextDialog').classList += ' hidden'
   document.getElementById('dialog1').classList = 'hidden'
@@ -50,15 +52,14 @@ function investigationChoiceTwo() {
   const choiceSelect = document.getElementById('investigationSelectTwo')
   const choice = parseInt(choiceSelect.value)
 
-  if (choice === 1)
+  if (choice === 1) {
     document.getElementById('investigationPart2Choice1').classList = ''
-  else document.getElementById('investigationPart2Choice2').classList = ''
+    isCatch = true
+  } else document.getElementById('investigationPart2Choice2').classList = ''
 
   choiceSelect.classList = 'hidden'
   document.getElementById('dialog4').classList = 'hidden'
 }
-
-function investigationPartTwoOne() {}
 
 function investigationPartTwoTwo() {
   investigationTwo.classList = 'hidden'
