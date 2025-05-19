@@ -108,12 +108,16 @@ function verifierNom() {
   let selection = document.getElementById('nomselectionner')
 
   const nomMinuscule = selection.value
-     
-  //Rajoute une vérification sur la longueur du nom pour faire que si jamais 
-  // on est en dessous de 3 caractères dire que le pseudo est invalide et si 
+
+  //Rajoute une vérification sur la longueur du nom pour faire que si jamais
+  // on est en dessous de 3 caractères dire que le pseudo est invalide et si
   // plus de 25 caractères faire de même
 
-  if (nomsInterdits.includes(nomMinuscule.toLowerCase()) || nomMinuscule.length < 3 || nomMinuscule.length > 25) {
+  if (
+    nomsInterdits.includes(nomMinuscule.toLowerCase()) ||
+    nomMinuscule.length < 3 ||
+    nomMinuscule.length > 25
+  ) {
     boutton_valider.style.opacity = 0.2
 
     boutton_valider.disabled = true
@@ -127,4 +131,10 @@ function verifierNom() {
     //alert('Nom valide! Vous pouvez continuez!')
   }
 }
- 
+
+// author: @SaurFort
+// J'ai codé cette fonction car on vient jouer avec les cookies
+function valid() {
+  const species = document.getElementById('Espèce').value
+  const sexe = document.getElementById('radio').value
+}
