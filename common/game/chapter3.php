@@ -21,8 +21,8 @@
       <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
       <option value="1">Seule une répression permettra de calmer les émeutes.</option>
       <option value="2">Annoncer un couvre-feu et appelez au calme, cela devrait aider à éviter le bain de sang.</option>
-      <option id="select1Choice3" value="3">*(Essayer de convaincre le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> de calmer les émeutes sans violence.)*</option>
-      <option id="select1Choice4" value="4">*(Discuter avec le conseiller <?= $race === 'kraith' ? 'Elrin' : 'R-2D1' ?> d'une solution pacifique.)*</option>
+      <option class="<?= $karma > 2 ? 'hidden' : '' ?>" id="select1Choice3" value="3">*(Essayer de convaincre le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> de calmer les émeutes sans violence.)*</option>
+      <option class="<?= $karma < -2 ? 'hidden' : '' ?>" id="select1Choice4" value="4">*(Discuter avec le conseiller <?= $race === 'kraith' ? 'Elrin' : 'R-2D1' ?> d'une solution pacifique.)*</option>
     </select>
   </div>
 
