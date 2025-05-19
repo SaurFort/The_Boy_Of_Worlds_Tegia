@@ -31,15 +31,11 @@ function investigation() {
   const choiceSelect = document.getElementById('investigationChoice')
   const choice = parseInt(choiceSelect.value)
 
-  if (choice === 1) {
-    investigationOne.classList = ''
-  } else if (choice === 2) {
-    investigationTwo.classList = ''
-  } else if (choice === 3) {
-    investigationThree.classList = ''
-  } else {
-    return
-  }
+  if (choice === 1) investigationOne.classList = ''
+  else if (choice === 2) investigationTwo.classList = ''
+  else if (choice === 3) investigationThree.classList = ''
+  else if (choice === 4) nextScene()
+  else return
 
   investigationDiv.classList = 'hidden'
 }
@@ -50,7 +46,27 @@ function investigationChoiceOne() {
   investigationOne.classList = 'hidden'
 }
 
-function investigationChoiceTwo() {}
+function investigationChoiceTwo() {
+  const choiceSelect = document.getElementById('investigationSelectTwo')
+  const choice = parseInt(choiceSelect.value)
+
+  if (choice === 1)
+    document.getElementById('investigationPart2Choice1').classList = ''
+  else document.getElementById('investigationPart2Choice2').classList = ''
+
+  choiceSelect.classList = 'hidden'
+  document.getElementById('dialog4').classList = 'hidden'
+}
+
+function investigationPartTwoOne() {}
+
+function investigationPartTwoTwo() {
+  investigationTwo.classList = 'hidden'
+  document.getElementById('dialog4').classList = ''
+  investigationDiv.classList = ''
+  document.getElementById('investigationPart2Choice2').classList = 'hidden'
+  document.getElementById('investigationSelectTwo').classList = ''
+}
 
 function investigationChoiceThree() {
   investigationThree.classList = 'hidden'

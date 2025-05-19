@@ -48,6 +48,7 @@
         <option id="investigationChoice1" value="1">*(Allez voir les témoins.)*</option>
         <option class="hidden" id="investigationChoice2" value="2">*(Suivre la trace des terroristes.)*</option>
         <option id="investigationChoice3" value="3">*(Observer les fragments <?= $race === 'kraith' ? "d'armure Kraiths" : 'de membres Yalks' ?>.)*</option>
+        <option id="investigationChoice4" value="4">*(Partir faire votre rapport à <?= $queen ?>)*</option>
       </select>
     </div>
     <div class="hidden" id="investigation1">
@@ -66,16 +67,28 @@
       <a class="button" onclick="investigationChoiceOne()">Suivant</a>
     </div>
     <div class="hidden" id="investigation2">
-      <p class="text-center">
+      <p class="text-center" id="dialog4">
         <em>Vous suivez la piste donné par le Témoin 2, la piste est facile à suivre avec toutes ces traces de sang. Puis vous arrivez devant une grotte.</em>
       </p>
-      <select id="investigationSelectTwo" name="investigationSelectTwo" oninput="investigationTwoSelect()">
+      <select id="investigationSelectTwo" name="investigationSelectTwo" oninput="investigationChoiceTwo()">
         <option value="" selected disabled>-- Que souhaitez-vous faire ? --</option>
         <option value="1">*(Entrer dans la grotte)*</option>
         <option value="2">*(Faire demi-tour)*</option>
       </select>
-      <div class="hidden" id="">
-        <a class=" button" onclick="investigationChoiceTwo()">Suivant</a>
+      <div class="hidden" id="investigationPart2Choice1">
+        <p class="text-center">
+          <em>Vous entez dans la grotte, l'humidité dans cette grotte est très élevé.</em>
+        </p>
+        <p>
+          <em>En avançant dans la grotte vous tombez sur un <?= $properRace ?></em>
+        </p>
+        <a class="button" onclick="investigationPartTwoOne()">Suivant</a>
+      </div>
+      <div class="hidden" id="investigationPart2Choice2">
+        <p class="text-center">
+          <em>Vous faites demi-tour et retourner vers le camp.</em>
+        </p>
+        <a class="button" onclick="investigationPartTwoTwo()">Suivant</a>
       </div>
     </div>
     <div class="hidden" id="investigation3">
