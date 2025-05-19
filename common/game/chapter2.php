@@ -117,7 +117,7 @@
     <img src="../../assets/images/<?= $race ?>/chapter1/s_trone.png" />
     <p class="text-center">
       <em>
-        Vous arrivez dans la salle du trône<span id="prisonner"></span>. <?= $queen ?> vous attends.
+        Vous arrivez dans la salle du trône. <?= $queen ?> vous attends.
       </em>
     </p>
     <select id="select3" name="select3" oninput="sceneThree()">

@@ -72,10 +72,7 @@ function testQte() {
       qteTestBtn.classList = 'button'
       qteState.isActive = false
       validQte()
-      setTimeout(() => {
-        qteExplainationDiv.classList = ''
-        qteResult.innerText = ''
-      }, 3000)
+      setTimeout(() => resetQTE(), 3000)
     }, test.qteDuration)
   }, test.delay)
 }
@@ -126,4 +123,9 @@ function generateQTE() {
     delay, // Délai avant le début du QTE (en ms)
     qteDuration, // Temps pour réagir une fois le QTE lancé (en ms)
   }
+}
+
+function resetQTE() {
+  qteExplainationDiv.classList = ''
+  qteResult.innerText = ''
 }
