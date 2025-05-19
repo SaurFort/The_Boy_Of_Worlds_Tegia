@@ -43,10 +43,10 @@
       <p id="investigationInstruction" class="text-center">
         <em>Que souhaitez-vous faire ?</em>
       </p>
-      <select id="investigationChoice" name="investigationChoice">
+      <select id="investigationChoice" name="investigationChoice" oninput="investigation()">
         <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
         <option id="investigationChoice1" value="1">*(Allez voir les témoins.)*</option>
-        <option id="investigationChoice2" value="2">*(Suivre la trace des terroristes.)*</option>
+        <option class="hidden" id="investigationChoice2" value="2">*(Suivre la trace des terroristes.)*</option>
         <option id="investigationChoice3" value="3">*(Observer les fragments <?= $race === 'kraith' ? "d'armure Kraiths" : 'de membres Yalks' ?>.)*</option>
       </select>
     </div>
