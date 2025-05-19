@@ -89,7 +89,6 @@
             En avançant dans la grotte vous tombez sur un <?= $properRace ?>, ainsi qu'un deuxième <?= $properRace ?> mais qui semble mort. Ils se révèlent que le <?= $properRace ?> que vous venez de trouver et l'un des 2 responsables de l'attentat. Vous allez désormais le traîner devant la justice.
           </em>
         </p>
-        <a class="button" onclick="nextScene()">Suivant</a>
       </div>
       <div class="hidden" id="investigationPart2Choice2">
         <p class="text-center">
@@ -114,10 +113,22 @@
   </div>
 
   <!-- Scene 3 -->
-  <div class="hidden" id="scene3"></div>
+  <div class="hidden" id="scene3">
+    <img src="../../assets/images/<?= $race ?>/chapter1/s_trone.png" />
+    <p class="text-center">
+      <em>
+        Vous arrivez dans la salle du trône<span id="prisonner"></span>. <?= $queen ?> vous attends.
+      </em>
+    </p>
+    <select id="select3" name="select3" oninput="sceneThree()">
+      <option value="" selected disabled>-- Qu'allez-vous répondre ? --</option>
+      <option class="hidden" id="select3Choice1" value="1">Le prisonnier sera jugé. Nous devons montré que les actes ont un prix.</option>
+      <option value="2">Nous devrions étouffer l'affaire. La paix passe avant la justice.</option>
+      <option class="hidden" id="select3Choice3" value="3">Nous devrions l'exécuter immédiatement !</option>
+      <option value="4">Nous devrions nous entretenir de nouveau avec les émissaires Yalks.</option>
+    </select>
+  </div>
 
-  <!-- Scene 4 -->
-  <div class="hidden" id="scene4"></div>
   <a id="nextScene" class="button hidden" onclick="nextScene()">Suivant</a>
 </div>
 

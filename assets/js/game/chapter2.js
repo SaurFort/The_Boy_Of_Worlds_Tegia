@@ -55,7 +55,13 @@ function investigationChoiceTwo() {
   if (choice === 1) {
     document.getElementById('investigationPart2Choice1').classList = ''
     isCatch = true
-  } else document.getElementById('investigationPart2Choice2').classList = ''
+    document.getElementById('select3Choice1').classList = ''
+    document.getElementById('select3Choice3').classList = ''
+    btnTimeout(2000)
+  } else {
+    document.getElementById('investigationPart2Choice2').classList = ''
+    document.getElementById('nextScene').classList = 'button'
+  }
 
   choiceSelect.classList = 'hidden'
   document.getElementById('dialog4').classList = 'hidden'
@@ -72,4 +78,21 @@ function investigationPartTwoTwo() {
 function investigationChoiceThree() {
   investigationThree.classList = 'hidden'
   investigationDiv.classList = ''
+}
+
+function sceneThree() {
+  const choiceSelect = document.getElementById('select3')
+  const choice = parseInt(choiceSelect.value)
+
+  if (choice === 1) {
+    karma += 2
+  } else if (choice === 2) {
+    karma--
+  } else if (choice === 3) {
+    karma -= 3
+  } else if (choice === 4) {
+    karma += 1
+  }
+
+  nextPage()
 }
