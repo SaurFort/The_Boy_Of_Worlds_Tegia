@@ -18,6 +18,17 @@
         <b><?= $race === 'kraith' ? 'Elrin' : 'R-2D3' ?> - </b> <?= $karma >= 0 ? "Ma reine, le conseil continuera de vous soutenir coûte que coûte. Et je pense que $name vous soutiendra aussi." : "$name, vous ne pouvez pas nous faire ça, vous avez été le plus fidèle conseiller de la reine $queen." ?>
       </p>
     </div>
+    <a class="button" onclick="sceneOne()">Suivant</a>
+  </div>
+
+  <!-- Scene 2 -->
+  <div class="hidden" id="scene2">
+    <div id="forQueen">
+      <img src="../../assets/images/<?= $race ?>/chapter1/meeting.png" />
+    </div>
+    <div id="againstQueen">
+      <img src="../../assets/images/<?= $race ?>/chapter3/s_trone.png" />
+    </div>
   </div>
 
   <?php
