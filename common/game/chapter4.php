@@ -23,15 +23,46 @@
 
   <!-- Scene 2 -->
   <div class="hidden" id="scene2">
-    <div id="forQueen">
+    <!-- Si karma >= 0 -->
+    <div class="hidden" id="forQueen">
       <img src="../../assets/images/<?= $race ?>/chapter1/meeting.png" />
+      <div id="forQueenGame">
+        <p class="text-justify">
+          <b><?= $queen ?> - </b> Merci <?= $name ?> de m'avoir soutenu jusqu'ici. Désormais, il ne reste plus qu'une chose à faire. Réussir à vaincre le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> ainsi, nous pourrons mettre un terme à cette guerre civil. Cependant je m'en remet à toi, tu as été mon plus fidèle conseiller et j'ai confiance en toi pour réussir à mettre un terme à cette guerre civil.
+        </p>
+        <select id="select2" name="select2" oninput="forQueen()">
+          <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
+          <option value="1">J'irai affronter le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?></option>
+          <option value="2">Il faut résister aux attaques ennemis et prier.</option>
+          <option value="3">Nous sommes perdus ...</option>
+        </select>
+      </div>
+      <div class="hidden" id="forQueenChoice">
+        <p class="text-center">
+          <em id="fqcText"></em>
+        </p>
+      </div>
     </div>
-    <div id="againstQueen">
+
+    <!-- Si karma < 0 -->
+    <div class="hidden" id="againstQueen">
       <img src="../../assets/images/<?= $race ?>/chapter3/s_trone.png" />
+      <select id="select2" name="select2" oninput="forQueen()">
+        <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
+        <option value="1">J'irai affronter la reine <?= $queen ?></option>
+        <option value="2">Il faut continuer de les attaquer.</option>
+        <option value="3">Nous sommes perdus ...</option>
+      </select>
+    </div>
+    <div class="hidden" id="againstQueenChoice">
+      <p class="text-center">
+        <em id="aqcText"></em>
+      </p>
     </div>
   </div>
 
   <?php
+  // On importe le QTE pour l'avoir sous la main
   include "../common/minigame/qte.html";
   ?>
 
