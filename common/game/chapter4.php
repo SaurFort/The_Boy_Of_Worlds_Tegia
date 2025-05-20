@@ -9,7 +9,7 @@
     <img src="../../assets/images/<?= $race ?>/chapter1/meeting.png" />
     <div class="dialog1">
       <p class="text-center">
-        <em>Vous êtes actuellement en cellule de crise. Il y a un soulèvement, et désormais l'avenir des <?= $properRace ?> repose actuellement sur vos épaules.</em>
+        <em>Vous êtes actuellement en cellule de crise. Il y a un soulèvement, et désormais l'avenir des <?= $properRace ?> repose sur vos épaules.</em>
       </p>
       <p class="text-justify">
         <b><?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> - </b> <?= $karma >= 0 ? "$queen, je ne vous soutiendrais plus ! Puisque vous n'êtes pas pour l'armée, alors vous êtes contre. De toutes manière, votre fin arrivera bientôt." : "La reine ne mérite plus votre soutien $name. Venez avec moi ! Je pense que seule vous êtes en capacité de nous diriger." ?>

@@ -2,11 +2,16 @@
 * {
   /* Theme */
   --bg: #1f5b1f;
+  --bg: #2e2e2e;
   --bg-container: #0f380f;
+  --bg-container: #2f3699;
 
   --text: #fff;
 
+   
   --accent-primary: #126817;
+  --accent-primary: #5963ff;
+  
 
   /* Propriété */
   transition: all 0.5s ease;

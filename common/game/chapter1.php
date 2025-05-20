@@ -38,7 +38,7 @@
       <p class="text-justify">
         <b>R2D1 - </b> Votre peuple a signé un traité. Ce traité comprenait le partage de nos ressources! Vos émotions sont des interférences innaceptables dans le maintient de la paix.
       </p>
-      <a class="button" onclick="sceneTwo()">Lancer le QTE</a>
+      <a class="button" onclick="sceneTwo()">Lancer le Défi</a>
     </div>
     <div class="hidden" id="dialogBox4">
       <p class="hidden" id="dialog4"><b><?= $race === "kraith" ? "R-2D3" : "Elrin" ?> - </b></p>
