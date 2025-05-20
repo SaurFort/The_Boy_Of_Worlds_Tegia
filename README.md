@@ -4,6 +4,12 @@ The Boy of Worlds: Tegia est un jeu basé sur l'univers de The Boy of Worlds. Il
 
 Ce projet rentre dans le cadre d'un projet de spécialité NSINF, pour voir les contraintes posé par ce projet, vous pouvez consulter la section [Contrainte Technique](#contrainte-technique).
 
+> [!NOTE]\
+> Quelques informations par rapport à PHP sont disponible [ici](./docs/php.md)
+
+> [!WARNING]\
+> La mini-documentation sur PHP est incomplète, les commentaires dans le code viennent par conséquent compléter cette documentation.
+
 ## Sommaire
 
 - [The Boy of Worlds: Tegia](#the-boy-of-worlds-tegia)
@@ -54,12 +60,6 @@ Nous avions aussi interdiction d'utiliser de framework/librairie et de se servir
 Nous aurions pu implémenter un **système de sauvegarde côté serveur** avec une **base de données**, soit simplement avec une base de données **SQLite** ou de manière plus avancés avec une base de données **MySQL/MariaDB** ou encore avec **PostgreSQL**.
 
 ### Gestion amélioré des cookies
-
-> [!NOTE]\
-> Actuellement ce site fonctionne pratiquement qu'avec des cookies, ce qui est une contrainte en soit car les cookies sont souvent mal vu.
-
-> [!WARNING]\
-> Il est vrai que certains site utilisent les cookies de manière malveillantes, cependant ce n'est pas de tous. Dans notre cas, notre utilisation des cookies est purement dans le cadre de sauvegarde temporaire des données car ils sont supprimé dès la fermeture du navigateur.
 
 > [!IMPORTANT]\
 > Les cookies utilisé par ce site ne sont pas sécuriser et par conséquent ne contienne aucun information sensible, cependant attention si quelqu'un vous envoie un lien pour ce site car il pourrait être malveillant.
