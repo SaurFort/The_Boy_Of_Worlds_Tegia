@@ -3,6 +3,11 @@ const qteGame = document.getElementById('qte')
 // Nous cachons le QTE au chargement de la page
 qteGame.classList = 'hidden'
 
+/**
+ * Logique de la scène 1
+ *
+ * @returns
+ */
 function sceneOne() {
   nextScene()
 
@@ -10,6 +15,11 @@ function sceneOne() {
   else document.getElementById('againstQueen').classList = ''
 }
 
+/**
+ * Logique lorsque le joueur est pour la reine (définit si son karma est plus grand ou égal à 0)
+ *
+ * @returns
+ */
 function forQueen() {
   const choice = parseInt(document.getElementById('select2').value)
 
@@ -67,6 +77,11 @@ function forQueen() {
   document.getElementById('forQueenGame').classList = 'hidden'
 }
 
+/**
+ * Logique lorsque le joueur est contre la reine (définit si son karma est plus petit que 0)
+ *
+ * @returns
+ */
 function againstQueen() {
   const choice = parseInt(document.getElementById('select2').value)
 

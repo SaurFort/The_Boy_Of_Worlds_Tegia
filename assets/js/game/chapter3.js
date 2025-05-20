@@ -1,9 +1,17 @@
+// author: @SaurFort
 const qteGame = document.getElementById('qte')
 const dialog = document.getElementById('dialog2')
 
 // On cache le QTE au chargement de la page
 qteGame.classList += 'hidden'
 
+// Dans le cas du QTE ici, on utilise deux logique différentes entre le choix 3 et 4 pour les callbacks donc ils sont définit dans chacun des fonctions au moment de l'appel des fonctions.
+
+/**
+ * Logique de la scène 1
+ *
+ * @returns
+ */
 function selectOne() {
   const choiceSelect = document.getElementById('select1')
   const choice = parseInt(choiceSelect.value)
@@ -30,6 +38,11 @@ function selectOne() {
   setTimeout(() => nextPage(), 5000)
 }
 
+/**
+ * Logique du troisième choix (nécessaire car on se sert d'un QTE)
+ *
+ * @returns
+ */
 function choiceThree() {
   document.getElementById('scene1').classList = 'hidden'
   qteGame.classList = ''
@@ -55,6 +68,11 @@ function choiceThree() {
   }
 }
 
+/**
+ * Logique du quatrième choix (nécessaire car on se sert d'un QTE)
+ *
+ * @returns
+ */
 function choiceFour() {
   document.getElementById('scene1').classList = 'hidden'
   qteGame.classList = ''

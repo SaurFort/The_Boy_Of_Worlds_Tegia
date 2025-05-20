@@ -4,6 +4,11 @@ const qteGame = document.getElementById('qte')
 qteGame.classList = 'hidden'
 const qteDifficulty = document.getElementById('difficulty')
 
+/**
+ * Logique de la première scène.
+ *
+ * @returns
+ */
 function sceneOne() {
   const choiceSelect = document.getElementById('scene1Choice')
   const choice = choiceSelect.value
@@ -39,13 +44,22 @@ function sceneOne() {
 
   btnTimeout(5000)
 }
-
+/**
+ * Logique de la deuxième scène.
+ *
+ * @returns
+ */
 function sceneTwo() {
   document.getElementById('dialog3').classList += ' hidden'
   qteGame.classList = ''
   qteDifficulty.innerText = 7
 }
 
+/**
+ * Logique du dialogue de la scène 2.
+ *
+ * @returns
+ */
 function sceneTwoDialog(success = false) {
   const dialog4 = document.getElementById('dialog4')
   const dialog5 = document.getElementById('dialog5')
@@ -79,6 +93,11 @@ function sceneTwoDialog(success = false) {
   )
 }
 
+/**
+ * Logique lors du choix dans la scène 2
+ *
+ * @returns
+ */
 function sceneTwoChoice() {
   const choiceSelect = document.getElementById('scene2Choice')
   const choice = parseInt(choiceSelect.value)
