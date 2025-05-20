@@ -28,7 +28,7 @@
       <img src="../../assets/images/<?= $race ?>/chapter1/meeting.png" />
       <div id="forQueenGame">
         <p class="text-justify">
-          <b><?= $queen ?> - </b> Merci <?= $name ?> de m'avoir soutenu jusqu'ici. Désormais, il ne reste plus qu'une chose à faire. Réussir à vaincre le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> ainsi, nous pourrons mettre un terme à cette guerre civil. Cependant je m'en remet à toi, tu as été mon plus fidèle conseiller et j'ai confiance en toi pour réussir à mettre un terme à cette guerre civil.
+          <b><?= $queen ?> - </b>Merci <?= $name ?> de m'avoir soutenu jusqu'ici. Désormais, il ne reste plus qu'une chose à faire. Réussir à vaincre le commandant <?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> ainsi, nous pourrons mettre un terme à cette guerre civil. Cependant je m'en remet à toi, tu as été mon plus fidèle conseiller et j'ai confiance en toi pour réussir à mettre un terme à cette guerre civil.
         </p>
         <select id="select2" name="select2" oninput="forQueen()">
           <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
@@ -41,12 +41,16 @@
         <p class="text-center">
           <em id="fqcText"></em>
         </p>
+        <a class="button" onclick="nextPage()">Fin !</a>
       </div>
     </div>
 
     <!-- Si karma < 0 -->
     <div class="hidden" id="againstQueen">
       <img src="../../assets/images/<?= $race ?>/chapter3/s_trone.png" />
+      <p class="text-justify">
+        <b><?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> - </b><?= $name ?>, vous pouvez comptez sur le soutien de l'armée, et je m'en remet à vous pour la suite. Que devons-nous faire ?
+      </p>
       <select id="select2" name="select2" oninput="forQueen()">
         <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
         <option value="1">J'irai affronter la reine <?= $queen ?></option>
@@ -58,6 +62,7 @@
       <p class="text-center">
         <em id="aqcText"></em>
       </p>
+      <a class="button" onclick="nextPage()">Fin !</a>
     </div>
   </div>
 

@@ -34,7 +34,8 @@ $oppositeRace = $race === "kraith" ? "Yalks" : "Kraiths";
   <p class="hidden" id="karma"><?= $karma ?></p>
 
   <?php
-  include "../common/game/chapter$chapter.php";
+  if ($chapter == '5') include "../common/game/outro.php";
+  else include "../common/game/chapter$chapter.php";
   ?>
 
   <a class="button hidden" id="nextPage" onclick="nextPage()">Suivant</a>
