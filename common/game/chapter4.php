@@ -51,7 +51,7 @@
       <p class="text-justify">
         <b><?= $race === 'kraith' ? 'Khoran' : 'R-2D1' ?> - </b><?= $name ?>, vous pouvez comptez sur le soutien de l'armée, et je m'en remet à vous pour la suite. Que devons-nous faire ?
       </p>
-      <select id="select2" name="select2" oninput="forQueen()">
+      <select id="select2" name="select2" oninput="againstQueen()">
         <option value="" selected disabled>-- Qu'allez-vous faire ? --</option>
         <option value="1">J'irai affronter la reine <?= $queen ?></option>
         <option value="2">Il faut continuer de les attaquer.</option>
