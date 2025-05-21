@@ -74,7 +74,7 @@ function forQueen() {
   }
 
   qteGame.classList = ''
-  document.getElementById('forQueenGame').classList = 'hidden'
+  document.getElementById('forQueen').classList = 'hidden'
 }
 
 /**
@@ -90,14 +90,14 @@ function againstQueen() {
 
     qteState.onSuccess = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         "Vous ... Vous venez de tuer la reine de sans froid... Vous vous sentez même libéré d'un poid. Vous hésitez presque à prendre sa place."
     }
 
     qteState.onFail = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         "Le combat est intense, et long, la pression est très forte. Mais la reine finit par trouver une ouverture et vous achève en un coup. Malgré que vous l'ayez trahis, elle ne vous aura pas fait souffrir. Elle est digne de garder son trône."
     }
@@ -106,14 +106,14 @@ function againstQueen() {
 
     qteState.onSuccess = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         "Vous menez tellement d'attaque que la défense ennemis finit par en être débordé. Vous profitez de cette occassion pour mener une ultime attaque, et mettre fin à tout cela."
     }
 
     qteState.onFail = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         "Une mystérieuse silhouette apparaît au moment où vous décidez de mener votre ultime attaque. Après un flash de lumière, plus rien... Vous ainsi que toutes l'armée vient d'être annihilé en un claquement de doigts. De toutes façon vous ne méritiez pas de survivre."
     }
@@ -122,19 +122,19 @@ function againstQueen() {
 
     qteState.onSuccess = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         'Puisque vous vous sentiez impuissant, vous avez décidé de vous suicidez. Tant de personnes étaient prête à mourrir pour vous, mais vous avez préférer mettre fin à vos jours, tel un lâche.'
     }
 
     qteState.onFail = () => {
       qteGame.classList = 'hidden'
-      document.getElementById('forQueenChoice').classList = ''
+      document.getElementById('againstQueenChoice').classList = ''
       document.getElementById('fqcText').innerText =
         "Vous venez d'essayer de vous suicidez, sauf que vous êtes tellement mauvais que même pour une tâche aussi simple, vous avez échoué. Heureusement pour vous, les rebels viennent de forcer les portes de la salle de réunion et vous poignarde dans le dos."
     }
   }
 
   qteGame.classList = ''
-  document.getElementById('forQueenGame').classList = 'hidden'
+  document.getElementById('againstQueen').classList = 'hidden'
 }
