@@ -20,7 +20,7 @@ function sceneOne() {
 }
 
 /**
- * Logique dee la scène 2
+ * Logique de la scène 2
  *
  * @returns
  */
@@ -32,7 +32,7 @@ function sceneTwo() {
 
   if (choice === 0) karma += 2
   else if (choice === 1) karma--
-  else if (choice === 2) karmar -= 3
+  else if (choice === 2) karma -= 3
 
   document.getElementById('dialog3').classList = 'hidden'
   document.getElementById('choice1').classList = 'hidden'
