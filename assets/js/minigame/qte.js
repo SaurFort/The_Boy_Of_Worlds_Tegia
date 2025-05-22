@@ -116,8 +116,8 @@ function generateQTE() {
   // Délai aléatoire entre 1,5 et 10 secondes (en ms)
   const delay = Math.floor(Math.random() * (10_000 - 1_500 + 1)) + 1_500
 
-  // Durée du QTE en fonction de la difficulté (entre 3000ms et 250ms)
-  const qteDuration = 3_000 - ((difficulty - 1) / 9) * (3_000 - 250)
+  // Durée du QTE en fonction de la difficulté (entre 3000ms et 500ms)
+  const qteDuration = 3_000 - ((difficulty - 1) / 9) * (3_000 - 500)
 
   return {
     delay, // Délai avant le début du QTE (en ms)
